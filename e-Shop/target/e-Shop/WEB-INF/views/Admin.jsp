@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -15,10 +16,9 @@
 <ul class="nav nav-tabs">
     <li class="active"><a  href="index">Home</a></li>
     <li><a  href="alluser">ALL USER</a></li>
-    <li><a  href="#menu2">Menu 2</a></li>
-    <li><a  href="#menu3">Menu 3</a></li>
     <li><a href="category">Category</a></li>
     <li><a href="supplier">Supplier</a></li>
+    <li><a href="product">Product</a></li>
   </ul>
 
   <div class="tab-content">

@@ -51,7 +51,7 @@ public class SupplierDAOImpl implements SupplierDAO{
 
 		Session session=sessionFactory.openSession();
 		Transaction trans=session.beginTransaction();
-		Supplier supplier=(Supplier)session.get(Supplier.class, id);
+		Supplier supplier=(Supplier)session.get(Supplier.class,id);
 		session.delete(supplier);
 		trans.commit();
 		session.clear();
@@ -61,7 +61,7 @@ public class SupplierDAOImpl implements SupplierDAO{
 	{
 		Session session=sessionFactory.openSession();
 		Transaction trans=session.beginTransaction();
-		Supplier supplier=(Supplier)session.get(Supplier.class, id);
+		Supplier supplier=(Supplier)session.get(Supplier.class,id);
 		trans.commit();
 		session.flush();
 		session.close();

@@ -12,21 +12,48 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <style type="text/css">
-  <%@include file="css/register.css" %>
-</style>
+<style>
+   tr,td{
+      padding: 10px;
+        }
+</style> 
 <title>category</title>
 </head>
 <body>
+<center>
+<div>
 <form:form action="editcategory" method="post" commandName="category1">
- <div class="reg">
- <h3>Add Category</h3>
- <br>
- <p> <label><b>Category Id : </b></label><form:input type="text" path="catid" value="${categorydata.catid}" required="true"/></p><br> 
- <p> <label><b>Category Name : </b></label><form:input type="text" path="catname" value="${categorydata.catname}" required="true"/></p><br>  
-  <p> <label><b>Category Description : </b></label><form:input type="text" path="catprice" value="${categorydata.catprice}" required="true"/></p><br>  
-   <p><button type="submit" class="btn btn-info btn-lg">ENTER</button><p>
-</div>
+<table>
+<thead>
+<tr>
+<td><h3>Add Category</h3></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><label>Category Id</label>
+<td><label>:</label></td>
+<td><form:input type="text" path="catid" value="${categorydata.catid}" required="true"/></td>
+</tr>
+<tr>
+<td><label>Category Name</label></td>
+<td><label>:</label></td> 
+<td><form:input type="text" path="catname" value="${categorydata.catname}" required="true"/></td>
+</tr>
+<tr>  
+<tr>
+<td><label>Category Description</label></td>
+<td><label>:</label></td>
+<td><form:input type="text" path="catprice" value="${categorydata.catprice}" required="true"/></td>
+<tr>  
+   <tr>
+<td colspan="2" align="center">
+<input class="btn btn-primary" type="submit" value="Enter"/></td>
+</tr>
+</tbody>
+</table>
 </form:form>
+</div>
+</center>
 </body>
 </html>

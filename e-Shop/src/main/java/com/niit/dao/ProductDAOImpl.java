@@ -38,12 +38,24 @@ public class ProductDAOImpl implements ProductDAO{
 		Session sec=sessionFactory.openSession();
 		Transaction trans=sec.beginTransaction();
 		@SuppressWarnings("unchecked")
-		List<Product> productlist = sec.createQuery("from Product").list();
+		List<Product> prolist = sec.createQuery("from Product").list();
 		trans.commit();
 		sec.flush();
 		sec.close();
-		return productlist ;
-}
+		return prolist ;
+    }
+	
+	public void deleteProduct(String id)
+	{
+		Session session=sessionFactory.openSession();
+		Transaction trans=session.beginTransaction();
+		Product product = (Product)session.get(Product.class, id);
+		session.delete(product);
+		trans.commit();
+		session.clear();
+	}
+	
+	
 
 
 }

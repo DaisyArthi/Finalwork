@@ -12,5 +12,16 @@ public class WelcomeController {
 		return "index";
 	}
 
+	@RequestMapping("/contact")
+	public String getContact()
+	{
+		return "ContactUs";
+	}
+	
+	@RequestMapping("/About")
+	public String getAbout()
+	{
+		return "About";
+	}
 
 }

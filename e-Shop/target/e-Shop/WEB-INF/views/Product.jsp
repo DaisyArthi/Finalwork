@@ -18,17 +18,18 @@
 </head>
 <body>
 <form:form action="product" method="post" commandName="product">
-  <div class="register">
+  <div class="reg">
   <h1>Add Product</h1>
-   <p> <label><b>Product ID : </b></label><form:input type="text" placeholder="Product ID" path="productid" required="true"/></p><br>
+   <p> <form:input type="hidden" placeholder="Product ID" path="productid" required="true"/></p><br>
    <p> <label><b>Product Name : </b></label><form:input type="text" placeholder="Product Name" path="productname" required="true"/></p><br>  
    <p> <label><b>Product Price : </b></label><form:input type="text" placeholder="Product Price " path="productprice" required="true"/> </p><br>
    <p> <label><b>Product Quantity : </b></label><form:input type="text" placeholder="Product Quantity" path="quantity" required="true"/></p><br>
    <p> <label><b>Product Description : </b></label><form:input type="text" placeholder="Product Description" path="description" required="true"/></p><br>
-   <p> <label><b>Category: </b></label><form:select name="Category" path="category" >
+   <p> <label><b>Upload a image :</b></label><form:input type="file" name="Image" placeholder="Product Image" path="image"/></p><br>
+   <p> <label><b>Category: </b></label><form:select name="Category" path="catid" >
    <option value="-1" selected>--category--</option>
          <c:forEach var="category" items="${catlist}">
-         <option value="${category.category}">${category.catname}</option></c:forEach>
+         <option value="${category.catid}">${category.catname}</option></c:forEach>
    </form:select>
    </p><br> 
     <p> <label><b>Supplier </b></label><form:select name="Supplier" path="supplier" >
@@ -43,34 +44,43 @@
   <br>
 <br>
 <br>
-<div class="register">
+<div class="reg">
 <h3>Category details</h3>
 </div>
 <br>
-<table border="1" cellpadding="5"  class="table table-bordered">
+<div class="container">
+<table class="table table-hover">
+
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>PRIZE</th>
+        <th>QUANTITY</th>
+        <th>DESCRIPTION</th>
+        <th>IMAGE</th>
+        <th>CATEGORY ID</th>
+        <th>SUPPLIER NAME</th>
+      </tr>
+      </thead>
+ <c:forEach var="pro" items="${prolist}">
+ <c:url value="/images/${pro.productid}.jpg" var="imageurl"></c:url>
+   <tbody>
 <tr>
-<th>Product id</th>
-<th>Product name</th>
-<th>Product price</th>
-<th>Product quantity</th>
-<th>Product description</th>
-<th>Category</th>
-<th>Supplier</th>
-<th>Delete</th>
-<th>Edit</th>
+<td>${pro.productid}</td>
+<td>${pro.productname}</td>
+<td>${pro.productprice}</td>
+<td>${pro.quantity}</td>
+<td>${pro.description}</td>
+<td>${pro.catid}</td>
+<td>${pro.suppname}</td>
+<td><img src="${imageurl}" height="50" width="50"></td>
+<td><a href="deletepro?pid=${pro.productid}">Delete</a></td>
 </tr>
-<c:forEach var="product" items="${productlist}">
-<tr>
-<td>${product.productid}</td>
-<td>${product.productname}</td>
-<td>${product.productprice}</td>
-<td>${product.quantity }</td>
-<td>${product.description}</td>
-<td>${product.category}</td>
-<td>${product.supplier}</td>
-</tr>
+</tbody>
 </c:forEach>
 </table>
+</div> 
   </form:form>
 </body>
 </html>

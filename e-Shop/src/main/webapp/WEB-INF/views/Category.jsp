@@ -2,6 +2,8 @@
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+  <%@include file="/WEB-INF/views/CommonHeader.jsp" %>
+  <%@include file="/WEB-INF/views/footer.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,36 +12,47 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style type="text/css">
-  <%@include file="css/register.css" %>
-</style>
+<style>
+   tr,td{
+      padding: 10px;
+        }
+</style> 
 <title>Category</title>
 </head>
 <body>
-<ul class="nav nav-tabs">
-    <li class="active"><a  href="index">Home</a></li>
-    <li><a  href="alluser">ALL USER</a></li>
-    <li><a  href="#menu2">Menu 2</a></li>
-    <li><a  href="#menu3">Menu 3</a></li>
-    <li><a href="category">Category</a></li>
-    <li><a href="supplier">Supplier</a></li>
-  </ul>
+<center>
+<div>
 <form:form action="saveCategory" method="post" commandName="category">
- <div class="reg">
- <h3>Add Category</h3>
- <br>
- <p> <label><b>Category Name : </b></label><form:input type="text" path="catname" required="true"/></p><br>  
-  <p> <label><b>Category Description : </b></label><form:input type="text" path="catdes" required="true"/></p><br>  
-   <p><button type="submit" class="btn btn-info btn-lg">ENTER</button><p>
+<table>
+<thead>
+<tr>
+ <td><h3>Add Category</h3></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><label>Category Name</label>
+<td><label>:</label></td>
+<td><form:input class="form-control" type="text" placeholder="Enter the Category" path="catname" required="true"/></td>
+</tr>
+<tr>
+<td><label>Category Description</label></td>
+<td><label>:</label></td>
+<td><form:input class="form-control" type="text" placeholder="Enter the Description" path="catdes" required="true"/></td>
+</tr>  
+<tr>
+<td colspan="2" align="center">
+<input class="btn btn-primary" type="submit" value="Enter"/></td>
+</tr>
+</tbody>
+</table>
+</form:form>
 </div>
-<br>
-<br>
-<br>
-<div class="reg">
+</center>
 <h3>Category details</h3>
-</div>
 <br>
-<table border="1" cellpadding="5"  class="table table-bordered">
+<table class="table">
+<thead>
 <tr>
 <th>Category id</th>
 <th>Category Name</th>
@@ -47,6 +60,8 @@
 <th>Delete</th>
 <th>Edit</th>
 </tr>
+</thead>
+<tbody>
 <c:forEach var="category" items="${catlist}">
 <tr>
 <td>${category.catid}</td>
@@ -56,7 +71,7 @@
 <td><a href="editcat?cid=${category.catid}">EDIT</a></td>
 </tr>
 </c:forEach>
+</tbody>
 </table>
-</form:form>
 </body>
 </html>

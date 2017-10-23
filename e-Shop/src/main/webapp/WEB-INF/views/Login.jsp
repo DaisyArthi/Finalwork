@@ -4,6 +4,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<%@include file="/WEB-INF/views/Header.jsp" %>
+<%@include file="/WEB-INF/views/footer.jsp" %>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,6 +14,8 @@
 <title>Login</title>
 </head>
 <body>
+<br>
+<br>
 <div align="justify">
 <div align="center">
 
@@ -54,7 +58,7 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<input style="background-color:purple" type="submit" class="btn btn-lg btn-primary btn-block" value="Sign in">
+											<input style="background-color:blue" type="submit" class="btn btn-lg btn-primary btn-block" value="Sign in">
 										</div>
 									</div>
 								</div>

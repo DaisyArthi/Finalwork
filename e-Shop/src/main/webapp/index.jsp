@@ -1,5 +1,6 @@
-<html>
+<html lang="en">
  <%@include file="/WEB-INF/views/Header.jsp" %>
+ <%@include file="/WEB-INF/views/footer.jsp" %>
  <head>
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +9,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  </head>
 <body>
+<br>
+<br>
 <div class="container">
+  <h2>Cameras</h2>  
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -20,15 +24,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="https://placehold.it/1200x400?text=Another Image Maybe"   alt="Los Angeles" width="1200" height="400">
+        <img src="images/images2.jpg/" alt="Los Angeles" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="https://placehold.it/1200x400?text=Another Image Maybe" alt="Chicago" >
+        <img src="images/nikon.jpg/" alt="Chicago" style="width:100%;">
       </div>
     
       <div class="item">
-        <img src="https://placehold.it/1200x400?text=Another Image Maybe" alt="New york" >
+        <img src="images/nikon D750.jpg/" alt="New york" style="width:100%;">
       </div>
     </div>
 
@@ -42,73 +46,72 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-</div>
-<div class="container">
-  <h2>Find your favourite toy!!!!!!</h2>
+</div><div class="container">
+  <h2>Find your Camera</h2>
   <p></p><br>
   <div class="row">
     <div class="col-md-4">
       <div class="thumbnail">
-        <a href="barbie.jpg" target="_blank">
-          <img src="" alt="Lights"  style="width:100%">
+        <a href="index.jpg" target="_blank">
+          <img src="images/index.jpg/" alt="Lights"  style="width:width:250px; height:160px">
           <div class="caption">
-            <p>Barbie princess doll</p>
-            <p>Rs:584
+            <p>Startup Camera</p>
+            <p>Rs:113499
           </div>
         </a>
       </div>
     </div>
     <div class="col-md-4">
       <div class="thumbnail">
-        <a href="car1.jpeg" target="_blank">
-          <img src="images/car1.jpeg/" alt="Fjords"  style="width:100%">
+        <a href="index1.jpeg" target="_blank">
+          <img src="images/index1.jpg/" alt="Fjords"  style="width:250px; height:160px">
           <div class="caption">
-            <p>Cute beetless smart mini ride on</p>
-            <p>Rs:1199
+            <p>Point and shoot</p>
+            <p>Rs:11990
           </div>
         </a>
       </div>
     </div>
      <div class="col-md-4">
       <div class="thumbnail">
-        <a href="frog.jpg" target="_blank">
-          <img src="images/frog.jpg/" alt="Fjords" style="width:100%">
+        <a href="index2.jpg" target="_blank">
+          <img src="images/index2.jpg/" alt="Fjords" style="width:250px; height:160px">
           <div class="caption">
-            <p>Cally soft doll for girls</p>
-            <p>Rs:476
+            <p>Mirrorless Camera</p>
+            <p>Rs:47600
           </div>
         </a>
       </div>
     </div>
     <div class="col-md-4">
       <div class="thumbnail">
-        <a href="car.jpg" target="_blank">
-          <img src="images/car.jpg/" alt="Nature" style="width:100%">
+        <a href="index3.jpg" target="_blank">
+          <img src="images/index3.jpg/" alt="Nature" style="width:250px; height:160px">
           <div class="caption">
-            <p>Maisto builder zone crane orange</p>
-            <p>Rs:600
+            <p>DSLR</p>
+            <p>Rs:60000
           </div>
         </a>
       </div>
     </div>
     <div class="col-md-4">
       <div class="thumbnail">
-        <a href="doll.jpg" target="_blank">
-          <img src="images/doll.jpg/" alt="Fjords" style="width:100%">
+        <a href="index4.jpg" target="_blank">
+          <img src="images/index4.jpg/" alt="Fjords" style="width:250px; height:160px">
           <div class="caption">
-            <p>Cally soft doll for girls</p>
-            <p>Rs:476
+            <p>Point and shoot</p>
+            <p>Rs:47600
           </div>
         </a>
       </div>
     </div>
      <div class="col-md-4">
       <div class="thumbnail">
-        <a href="talking tom.jpg" target="_blank">
-          <img src="images/talking tom.jpg/" alt="Fjords"  style="width:100%">
+        <a href="index5.jpg" target="_blank">
+          <img src="images/index5.jpg/" alt="Fjords"  style="width:250px; height:160px">
           <div class="caption">
-            <p>Battery talking tom toy</p>
-            <p>Rs:358
+            <p>Mirrorless Camera</p>
+            <p>Rs:35800
           </div>
         </a>
       </div>

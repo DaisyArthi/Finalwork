@@ -14,7 +14,7 @@ public class Supplier {
 	
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Id
-	private String supplier;
+	private String suppid;
 	
 	@Column
 	private String suppname;
@@ -24,13 +24,16 @@ public class Supplier {
 	
 	@Column
 	private String suppaddress;
+	
+	
+	
 
-	public String getSupplier() {
-		return supplier;
+	public String getSuppid() {
+		return suppid;
 	}
 
-	public void setSupplier(String supplier) {
-		this.supplier = supplier;
+	public void setSuppid(String suppid) {
+		this.suppid = suppid;
 	}
 
 	public String getSuppname() {

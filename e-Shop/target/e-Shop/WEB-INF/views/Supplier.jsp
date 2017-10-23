@@ -16,6 +16,14 @@
 <title>Supplier</title>
 </head>
 <body>
+<ul class="nav nav-tabs">
+    <li class="active"><a  href="index">Home</a></li>
+    <li><a  href="alluser">ALL USER</a></li>
+    <li><a  href="#menu2">Menu 2</a></li>
+    <li><a  href="#menu3">Menu 3</a></li>
+    <li><a href="category">Category</a></li>
+    <li><a href="supplier">Supplier</a></li>
+  </ul>
 <form:form action="savesupplier"  method="post" commandName="supplier">
  <div class="reg">
  <h3>Add Supplier</h3>
@@ -38,16 +46,17 @@
 <th>Supplier Name</th>
 <th>Supplier Phone</th>
 <th>Supplier Address</th>
-<!-- <th>Delete</th>
-<th>Edit</th>-->
+<th>Delete</th>
+<th>Edit</th>
 </tr>
 <c:forEach var="supplier" items="${supplist}">
 <tr>
-<td>${supplier.supplier}</td>
+<td>${supplier.suppid}</td>
 <td>${supplier.suppname}</td>
 <td>${supplier.suppphone}</td>
 <td>${supplier.suppaddress}</td>
-<!-- <td><a href="deletesupp?sid=${supplier.supplier}">Delete</a></td>-->
+<td><a href="deletesupp?sid=${supplier.suppid}">Delete</a></td>
+<td><a href="editsupp?sid=${supplier.suppid}">Edit</a></td>
 </tr>
 </c:forEach>
 </table>

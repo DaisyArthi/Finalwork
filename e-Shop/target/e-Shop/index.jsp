@@ -20,7 +20,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="images/images.jpg/"   alt="Los Angeles" width="1200" height="400">
+        <img src="https://placehold.it/1200x400?text=Another Image Maybe"   alt="Los Angeles" width="1200" height="400">
       </div>
 
       <div class="item">
@@ -43,6 +43,82 @@
     </a>
   </div>
 </div>
+<div class="container">
+  <h2>Find your favourite toy!!!!!!</h2>
+  <p></p><br>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="barbie.jpg" target="_blank">
+          <img src="" alt="Lights"  style="width:100%">
+          <div class="caption">
+            <p>Barbie princess doll</p>
+            <p>Rs:584
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="car1.jpeg" target="_blank">
+          <img src="images/car1.jpeg/" alt="Fjords"  style="width:100%">
+          <div class="caption">
+            <p>Cute beetless smart mini ride on</p>
+            <p>Rs:1199
+          </div>
+        </a>
+      </div>
+    </div>
+     <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="frog.jpg" target="_blank">
+          <img src="images/frog.jpg/" alt="Fjords" style="width:100%">
+          <div class="caption">
+            <p>Cally soft doll for girls</p>
+            <p>Rs:476
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="car.jpg" target="_blank">
+          <img src="images/car.jpg/" alt="Nature" style="width:100%">
+          <div class="caption">
+            <p>Maisto builder zone crane orange</p>
+            <p>Rs:600
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="doll.jpg" target="_blank">
+          <img src="images/doll.jpg/" alt="Fjords" style="width:100%">
+          <div class="caption">
+            <p>Cally soft doll for girls</p>
+            <p>Rs:476
+          </div>
+        </a>
+      </div>
+    </div>
+     <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="talking tom.jpg" target="_blank">
+          <img src="images/talking tom.jpg/" alt="Fjords"  style="width:100%">
+          <div class="caption">
+            <p>Battery talking tom toy</p>
+            <p>Rs:358
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<br>
+<br>
 
 </body>
 </html>

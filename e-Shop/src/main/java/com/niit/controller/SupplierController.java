@@ -51,7 +51,7 @@ public class SupplierController {
 	{
 		Supplier supplier=supplierdao.getSupplier(suppid);
 		model.addAttribute("supplierdata", supplier);
-		model.addAttribute("supplier", new Supplier());
+		model.addAttribute("supplier1", new Supplier());
 		return "Editsupplier";	
 	}
 	

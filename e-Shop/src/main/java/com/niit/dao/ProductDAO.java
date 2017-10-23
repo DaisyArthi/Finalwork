@@ -9,4 +9,6 @@ public interface ProductDAO {
 	public void addProduct(Product product);
 
 	public List<Product> getProductList();
+	
+	public void deleteProduct(String id);
 }

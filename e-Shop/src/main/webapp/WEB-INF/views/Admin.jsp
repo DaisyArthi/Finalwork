@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
+     <%@include file="/WEB-INF/views/CommonHeader.jsp" %>
+     <%@include file="/WEB-INF/views/footer.jsp" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -10,58 +11,38 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>Insert title here</title>
+<title>Admin</title>
 </head>
 <body>
-<ul class="nav nav-tabs">
-    <li class="active"><a  href="index">Home</a></li>
-    <li><a  href="alluser">ALL USER</a></li>
-    <li><a href="category">Category</a></li>
-    <li><a href="supplier">Supplier</a></li>
-    <li><a href="product">Product</a></li>
-  </ul>
-
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <h3>HOME</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div id="alluser" class="tab-pane fade">
-    <h2>ALL USER</h2>
-
-<table border="1" cellpadding="5" class="table table-bordered">
+  
+<h3>Product details</h3>
+<table class="table">
+<thead>
 <tr>
-<th>FirstName</th>
-<th>LastName</th>
-<th>Phone</th>
-<th>Address</th>
-<th>Email</th>
-<th>UserName</th>
-<th>Password</th>
+<th>Product id</th>
+<th>Product image</th>
+<th>Product name</th>
+<th>Product price</th>
+<th>Product quantity</th>
+<th>Product description</th>
+<th>Delete</th>
+<th>Edit</th>
 </tr>
-<c:if test="${!empty userlist}">  
-<c:forEach var="user" items="${userlist}">
+</thead>
+<c:forEach var="product" items="${prolist}">
+<c:url value="/images/${product.productid}.jpg" var="imageurl"></c:url>
+<tbody>
 <tr>
-<td>${user.firstname}</td>
-<td>${user.lastname}</td>
-<td>${user.phone}</td>	
-<td>${user.address}</td>
-<td>${user.email}</td>
-<td>${user.username}</td>
-<td>${user.password}</td>
+<td>${product.productid}</td>
+<td><img src="${imageurl}" height="50" width="50"></td>
+<td>${product.productname}</td>
+<td>${product.productprice}</td>
+<td>${product.quantity }</td>
+<td>${product.description}</td>
+<td><a href="deleteproduct?pid=${product.productid}">Delete</a></td>
 </tr>
+</tbody>
 </c:forEach>
-</c:if>
 </table>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-    </div>
-    <div id="menu3" class="tab-pane fade">
-      <h3>Menu 3</h3>
-      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    </div>
-  </div>
 </body>
 </html>

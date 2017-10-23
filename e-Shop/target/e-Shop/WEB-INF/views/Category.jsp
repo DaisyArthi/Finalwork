@@ -16,12 +16,20 @@
 <title>Category</title>
 </head>
 <body>
+<ul class="nav nav-tabs">
+    <li class="active"><a  href="index">Home</a></li>
+    <li><a  href="alluser">ALL USER</a></li>
+    <li><a  href="#menu2">Menu 2</a></li>
+    <li><a  href="#menu3">Menu 3</a></li>
+    <li><a href="category">Category</a></li>
+    <li><a href="supplier">Supplier</a></li>
+  </ul>
 <form:form action="saveCategory" method="post" commandName="category">
  <div class="reg">
  <h3>Add Category</h3>
  <br>
  <p> <label><b>Category Name : </b></label><form:input type="text" path="catname" required="true"/></p><br>  
-  <p> <label><b>Category Description : </b></label><form:input type="text" path="catprice" required="true"/></p><br>  
+  <p> <label><b>Category Description : </b></label><form:input type="text" path="catdes" required="true"/></p><br>  
    <p><button type="submit" class="btn btn-info btn-lg">ENTER</button><p>
 </div>
 <br>
@@ -41,11 +49,11 @@
 </tr>
 <c:forEach var="category" items="${catlist}">
 <tr>
-<td>${category.category}</td>
+<td>${category.catid}</td>
 <td>${category.catname }</td>
-<td>${category.catprice}</td>
-<td><a href="deletecat?cid=${category.category}">Delete</a></td>
-<td><a href="editcat?cid=${category.category}">EDIT</a></td>
+<td>${category.catdes}</td>
+<td><a href="deletecat?cid=${category.catid}">Delete</a></td>
+<td><a href="editcat?cid=${category.catid}">EDIT</a></td>
 </tr>
 </c:forEach>
 </table>

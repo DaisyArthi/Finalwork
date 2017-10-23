@@ -5,8 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
 
 @Component
 @Entity
@@ -28,11 +30,14 @@ public class Product {
 	@Column 
 	private String description;
 	
-	@Column
-	private String category;
+	@Transient
+	private MultipartFile image;
 	
 	@Column
-	private String supplier;
+	private String catid;
+	
+	@Column
+	private String suppid;
 
 	public String getProductid() {
 		return productid;
@@ -74,22 +79,30 @@ public class Product {
 		this.description = description;
 	}
 
-	public String getCategory() {
-		return category;
+
+	public MultipartFile getImage() {
+		return image;
 	}
 
-	public void setCategory(String category) {
-		this.category = category;
+	public void setImage(MultipartFile image) {
+		this.image = image;
 	}
 
-	public String getSupplier() {
-		return supplier;
+	public String getCatid() {
+		return catid;
 	}
 
-	public void setSupplier(String supplier) {
-		this.supplier = supplier;
+	public void setCatid(String catid) {
+		this.catid = catid;
+	}
+
+	public String getSuppid() {
+		return suppid;
+	}
+
+	public void setSuppid(String suppid) {
+		this.suppid = suppid;
 	}
 
 	
-
 }
